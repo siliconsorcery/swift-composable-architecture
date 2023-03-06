@@ -31,4 +31,7 @@
    <FileRef
       location = "group:Examples/Counter/Counter.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Examples/Interesting/Interesting.xcodeproj">
+   </FileRef>
 </Workspace>
