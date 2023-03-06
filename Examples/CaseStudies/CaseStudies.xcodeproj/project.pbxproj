@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,13 +38,10 @@
 		CAF88E7524B8E26D00539345 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF88E7424B8E26D00539345 /* RootView.swift */; };
 		CAF88E7724B8E26E00539345 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF88E7624B8E26E00539345 /* Assets.xcassets */; };
 		CAF88E8824B8E26E00539345 /* FocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF88E8724B8E26E00539345 /* FocusTests.swift */; };
-		CAF88E9124B8E3AF00539345 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CAF88E9024B8E3AF00539345 /* ComposableArchitecture */; };
 		CAF88E9324B8E3D000539345 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF88E9224B8E3D000539345 /* Core.swift */; };
 		CAF88E9524B8E4D500539345 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF88E9424B8E4D500539345 /* FocusView.swift */; };
 		DC07231724465D1E003A8B65 /* 02-Effects-TimersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC07231624465D1E003A8B65 /* 02-Effects-TimersTests.swift */; };
 		DC072322244663B1003A8B65 /* 03-Navigation-Sheet-LoadThenPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC072321244663B1003A8B65 /* 03-Navigation-Sheet-LoadThenPresent.swift */; };
-		DC13940E2469E25C00EE1157 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DC13940D2469E25C00EE1157 /* ComposableArchitecture */; };
-		DC1394102469E27300EE1157 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DC13940F2469E27300EE1157 /* ComposableArchitecture */; };
 		DC25DC5F2450F13200082E81 /* IfLetStoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25DC5E2450F13200082E81 /* IfLetStoreController.swift */; };
 		DC25DC612450F2B000082E81 /* LoadThenNavigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25DC602450F2B000082E81 /* LoadThenNavigate.swift */; };
 		DC25DC642450F2DF00082E81 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25DC632450F2DF00082E81 /* ActivityIndicatorViewController.swift */; };
@@ -241,7 +238,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAF88E9124B8E3AF00539345 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +252,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC1394102469E27300EE1157 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +266,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC13940E2469E25C00EE1157 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +473,6 @@
 			);
 			name = tvOSCaseStudies;
 			packageProductDependencies = (
-				CAF88E9024B8E3AF00539345 /* ComposableArchitecture */,
 			);
 			productName = tvOSCaseStudies;
 			productReference = CAF88E7024B8E26D00539345 /* tvOSCaseStudies.app */;
@@ -518,7 +511,6 @@
 			);
 			name = UIKitCaseStudies;
 			packageProductDependencies = (
-				DC13940F2469E27300EE1157 /* ComposableArchitecture */,
 			);
 			productName = UIKitCaseStudies;
 			productReference = DC4C6EA72450DD380066A05D /* UIKitCaseStudies.app */;
@@ -560,7 +552,6 @@
 			);
 			name = SwiftUICaseStudies;
 			packageProductDependencies = (
-				DC13940D2469E25C00EE1157 /* ComposableArchitecture */,
 			);
 			productName = CaseStudies;
 			productReference = DC89C41324460F95006900B9 /* SwiftUICaseStudies.app */;
@@ -1257,21 +1248,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CAF88E9024B8E3AF00539345 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ComposableArchitecture;
-		};
-		DC13940D2469E25C00EE1157 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ComposableArchitecture;
-		};
-		DC13940F2469E27300EE1157 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ComposableArchitecture;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC89C40B24460F95006900B9 /* Project object */;
 }

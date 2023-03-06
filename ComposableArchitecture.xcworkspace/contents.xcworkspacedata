@@ -25,4 +25,10 @@
    <FileRef
       location = "group:Examples/VoiceMemos/VoiceMemos.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Examples/Tasks/Tasks.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Examples/Counter/Counter.xcodeproj">
+   </FileRef>
 </Workspace>

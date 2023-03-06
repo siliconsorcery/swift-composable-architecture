@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		CA86E49F24253C2500357AD9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA86E49E24253C2500357AD9 /* SearchView.swift */; };
 		CA86E4A124253C2700357AD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA86E4A024253C2700357AD9 /* Assets.xcassets */; };
 		CA86E4B224253C2700357AD9 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA86E4B124253C2700357AD9 /* SearchTests.swift */; };
-		DC1394142469E30800EE1157 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DC1394132469E30800EE1157 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC1394142469E30800EE1157 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +134,6 @@
 			);
 			name = Search;
 			packageProductDependencies = (
-				DC1394132469E30800EE1157 /* ComposableArchitecture */,
 			);
 			productName = Search;
 			productReference = CA86E49724253C2500357AD9 /* Search.app */;
@@ -492,13 +489,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		DC1394132469E30800EE1157 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ComposableArchitecture;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA86E48F24253C2500357AD9 /* Project object */;
 }
