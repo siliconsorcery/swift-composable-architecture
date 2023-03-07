@@ -5,24 +5,35 @@
 //  Created by John Cumming on 3/6/23.
 //
 
+import Clocks
 import ComposableArchitecture
 import SwiftUI
 
 struct Feature: ReducerProtocol {
+    @Dependency(\.numberFact) var numberFact
+    @Dependency(\.continuousClock) var clock
+
     struct State: Equatable {
         var count = 0
         var numberFactAlert: String?
     }
     
-    enum Action: Equatable {
-        case factAlertDismissed
-        case decrementButtonTapped
-        case incrementButtonTapped
-        case numberFactButtonTapped
-        case numberFactResponse(TaskResult<String>)
+    enum Action: Equatable { case
+        factAlertDismissed
+        ,decrementButtonTapped
+        ,incrementButtonTapped
+        ,numberFactButtonTapped
+        ,numberFactResponse(TaskResult<String>)
+        ,startTimerButtonTapped
+        ,timerTick
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    
+    func reduce(
+        into state: inout State
+        ,action: Action
+    ) -> EffectTask<Action> {
+    
         switch action {
         case .factAlertDismissed:
             state.numberFactAlert = nil
@@ -40,13 +51,7 @@ struct Feature: ReducerProtocol {
             return .task { [count = state.count] in
                 await .numberFactResponse(
                     TaskResult {
-                        String(
-                            decoding: try await URLSession
-                                .shared
-                                .data(from: URL(string: "http://numbersapi.com/\(count)/trivia")!)
-                                .0
-                            ,as: UTF8.self
-                        )
+                        try await self.numberFact.fetch(count)
                     }
                 )
             }
@@ -56,7 +61,19 @@ struct Feature: ReducerProtocol {
             return .none
             
         case .numberFactResponse(.failure):
-            state.numberFactAlert = "Could not load a number fact :("
+            state.numberFactAlert = "Could not load a number fact!"
+            return .none
+            
+        case .startTimerButtonTapped:
+            return .run { send in
+                for _ in 1...5 {
+                    try await self.clock.sleep(for: .seconds(1))
+                    await send(.timerTick)
+                }
+            }
+            
+        case .timerTick:
+            state.count += 1
             return .none
         }
     }
@@ -83,6 +100,11 @@ struct FeatureView: View {
                 Button("Get Number Fact") {
                     viewStore.send(.numberFactButtonTapped)
                 }
+
+                Button("Slowing Add 5") {
+                    viewStore.send(.startTimerButtonTapped)
+                }
+
             }
             .font(.title)
             .alert(

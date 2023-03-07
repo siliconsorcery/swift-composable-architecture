@@ -7,17 +7,20 @@
 
 import ComposableArchitecture
 import SwiftUI
+import XCTestDynamicOverlay
 
 @main
 struct InterestingApp: App {
     var body: some Scene {
         WindowGroup {
-            FeatureView(
-              store: Store(
-                initialState: Feature.State(),
-                reducer: Feature()
-              )
-            )
+            if !_XCTIsTesting {
+                FeatureView(
+                    store: Store(
+                        initialState: Feature.State(),
+                        reducer: Feature()
+                    )
+                )
+            }
         }
     }
 }

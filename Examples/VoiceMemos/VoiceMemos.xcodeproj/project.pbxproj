@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5223C7CA29B6435C002DB892 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5223C7C929B6435C002DB892 /* ComposableArchitecture */; };
 		CA93D05C249BF42500A6F65D /* VoiceMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA93D05B249BF42500A6F65D /* VoiceMemo.swift */; };
 		CA93D05E249BF46E00A6F65D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA93D05D249BF46E00A6F65D /* Helpers.swift */; };
 		CABAB49028A2B5F900122307 /* RecordingMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAB48F28A2B5F900122307 /* RecordingMemo.swift */; };
@@ -79,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5223C7CA29B6435C002DB892 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5223C7C829B6435C002DB892 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC5BDCA124589177009C65A3 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +109,7 @@
 				DC5BDCAB24589177009C65A3 /* Products */,
 				DC5BDCAC24589177009C65A3 /* VoiceMemos */,
 				DC5BDCC324589179009C65A3 /* VoiceMemosTests */,
+				5223C7C829B6435C002DB892 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +184,7 @@
 			);
 			name = VoiceMemos;
 			packageProductDependencies = (
+				5223C7C929B6435C002DB892 /* ComposableArchitecture */,
 			);
 			productName = VoiceMemos;
 			productReference = DC5BDCAA24589177009C65A3 /* VoiceMemos.app */;
@@ -519,6 +530,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5223C7C929B6435C002DB892 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC5BDCA224589177009C65A3 /* Project object */;
 }

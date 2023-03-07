@@ -29,6 +29,7 @@
 		5223C78629B435EB002DB892 /* IsPrimeModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsPrimeModalView.swift; sourceTree = "<group>"; };
 		5223C78829B443F4002DB892 /* WolframAlphaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolframAlphaService.swift; sourceTree = "<group>"; };
 		5223C78C29B4864E002DB892 /* CounterSecrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterSecrets.swift; sourceTree = "<group>"; };
+		5223C7CB29B6474F002DB892 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +46,7 @@
 		5223C76829B3F673002DB892 = {
 			isa = PBXGroup;
 			children = (
-				5223C77429B3F673002DB892 /* CounterApp.swift */,
+				5223C7CB29B6474F002DB892 /* README.md */,
 				5223C77329B3F673002DB892 /* Counter */,
 				5223C77229B3F673002DB892 /* Products */,
 			);
@@ -62,13 +63,14 @@
 		5223C77329B3F673002DB892 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
-				5223C77829B3F674002DB892 /* Assets.xcassets */,
+				5223C77429B3F673002DB892 /* CounterApp.swift */,
 				5223C78229B3FA7A002DB892 /* CountView.swift */,
 				5223C77629B3F673002DB892 /* CounterView.swift */,
 				5223C78629B435EB002DB892 /* IsPrimeModalView.swift */,
 				5223C78429B3FAF4002DB892 /* FavoritePrimesView.swift */,
 				5223C78829B443F4002DB892 /* WolframAlphaService.swift */,
 				5223C78C29B4864E002DB892 /* CounterSecrets.swift */,
+				5223C77829B3F674002DB892 /* Assets.xcassets */,
 				5223C77A29B3F674002DB892 /* Preview Content */,
 			);
 			path = Counter;

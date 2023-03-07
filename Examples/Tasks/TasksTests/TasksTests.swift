@@ -11,7 +11,7 @@ import XCTest
 @testable import Tasks
 
 @MainActor
-final class TasksTasks: XCTestCase {
+final class TasksTests: XCTestCase {
     let clock = TestClock()
     
     func testAddTodo() async {
@@ -33,6 +33,7 @@ final class TasksTasks: XCTestCase {
             )
         }
         
+//        await store.receive(.filterForAdd) {_ in }
         await store.send(.addTaskButtonTapped) {
             $0.tasks = [
                 Task.State(
@@ -79,7 +80,7 @@ final class TasksTasks: XCTestCase {
         
         await self.clock.advance(by: .seconds(1))
         
-        await store.receive(.sortComletedTasks\) {
+        await store.receive(.sortCompletedTasks) {
             $0.tasks = [
                 $0.tasks[1]
                 ,$0.tasks[0]

@@ -1,6 +1,5 @@
 import ComposableArchitecture
 import Foundation
-import XCTestDynamicOverlay
 
 // MARK: - API models
 

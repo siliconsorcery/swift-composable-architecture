@@ -36,6 +36,77 @@ struct Tasks: ReducerProtocol {
         case task(id: Task.State.ID, action: Task.Action)
     }
     
+//    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+//        switch action {
+//        case .addTaskButtonTapped:
+//            state.tasks.insert(Task.State(id: self.uuid()), at: 0)
+//            return .task {
+//                return .filterForAdd
+//            }
+//            
+//        case .clearCompletedButtonTapped:
+//            state.tasks.removeAll(where: \.isComplete)
+//            return .none
+//            
+//        case let .delete(indexSet):
+//            let filteredTasks = state.filtered
+//            for index in indexSet {
+//                state.tasks.remove(id: filteredTasks[index].id)
+//            }
+//            return .none
+//            
+//        case let .editModeChanged(editMode):
+//            state.editMode = editMode
+//            return .none
+//            
+//        case let .filterPicked(filter):
+//            state.filter = filter
+//            return .none
+//            
+//        case .filterForAdd:
+//            if state.filter == .completed {
+//                state.filter = .all
+//            }
+//            return .none
+//            
+//        case var .move(source, destination):
+//            if state.filter == .completed {
+//                source = IndexSet(
+//                    source
+//                        .map { state.filtered[$0] }
+//                        .compactMap { state.tasks.index(id: $0.id) }
+//                )
+//                destination = (
+//                    destination < state.filtered.endIndex
+//                    ? state.tasks.index(id: state.filtered[destination].id)
+//                    : state.tasks.endIndex
+//                ) ?? destination
+//            }
+//            state.tasks.move(fromOffsets: source, toOffset: destination)
+//            return .task {
+//                try await self.clock.sleep(for: .milliseconds(100))
+//                return .sortCompletedTasks
+//            }
+//            
+//        case .sortCompletedTasks:
+//            state.tasks.sort { $1.isComplete && !$0.isComplete }
+//            return .none
+//            
+//        case .task(id: _, action: .checkBoxToggled):
+//          return .run { send in
+//            try await self.clock.sleep(for: .seconds(1))
+//            await send(.sortCompletedTasks, animation: .default)
+//          }
+//          .cancellable(id: TaskCompletionID.self, cancelInFlight: true)
+//
+//        case .task:
+//          return .none
+//        }
+//    }
+//    .forEach(\.tasks, action: /Action.task(id:action:)) {
+//        Task()
+//    }
+    
     @Dependency(\.continuousClock) var clock
     @Dependency(\.uuid) var uuid
     private enum TaskCompletionID {}
@@ -88,10 +159,7 @@ struct Tasks: ReducerProtocol {
                     ) ?? destination
                 }
                 state.tasks.move(fromOffsets: source, toOffset: destination)
-                return .task {
-                    try await self.clock.sleep(for: .milliseconds(100))
-                    return .sortCompletedTasks
-                }
+                return .none
                 
             case .sortCompletedTasks:
                 state.tasks.sort { $1.isComplete && !$0.isComplete }

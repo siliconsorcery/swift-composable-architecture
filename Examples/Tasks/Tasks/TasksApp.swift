@@ -15,7 +15,8 @@ struct TasksApp: App {
             TasksView(
                 store: Store(
                     initialState: Tasks.State()
-                    ,reducer: Tasks()._printChanges()
+                    ,reducer: Tasks()
+                        ._printChanges()
                 )
             )
         }

@@ -64,7 +64,7 @@
 			children = (
 				5223C73929B3D5B5002DB892 /* README.md */,
 				5223C72029B3BCE1002DB892 /* Tasks */,
-				5223C73A29B3D64E002DB892 /* Tests */,
+				5223C73A29B3D64E002DB892 /* TasksTests */,
 				5223C73B29B3D6CA002DB892 /* Frameworks */,
 				5223C71F29B3BCE1002DB892 /* Products */,
 			);
@@ -99,12 +99,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5223C73A29B3D64E002DB892 /* Tests */ = {
+		5223C73A29B3D64E002DB892 /* TasksTests */ = {
 			isa = PBXGroup;
 			children = (
 				5223C73C29B3D704002DB892 /* TasksTests.swift */,
 			);
-			path = Tests;
+			path = TasksTests;
 			sourceTree = "<group>";
 		};
 		5223C73B29B3D6CA002DB892 /* Frameworks */ = {
